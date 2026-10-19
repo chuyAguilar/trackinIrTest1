@@ -13,6 +13,9 @@ import math
 import os
 import sys
 
+# Antes de importar cv2: oculta los avisos internos de OpenCV al probar backends
+os.environ.setdefault("OPENCV_LOG_LEVEL", "ERROR")
+
 import cv2
 import numpy as np
 
