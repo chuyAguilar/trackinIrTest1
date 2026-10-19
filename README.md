@@ -4,19 +4,35 @@ Detecta y mide LEDs IR con cualquier webcam: cuántos ve, distancia entre 2 LEDs
 
 > La webcam debe ser **sin filtro IR** (NoIR). Con una webcam normal solo verás LEDs visibles.
 
-## Instalar y correr (Windows)
+## Requisito: Python 3.12
+
+Descarga **Python 3.12.10**: https://www.python.org/downloads/release/python-31210/
+(Windows: "Windows installer (64-bit)"). Al instalar, marca **"Add python.exe to PATH"**.
+
+## Instalar (solo la primera vez, en PowerShell)
 
 ```
 git clone https://github.com/chuyAguilar/trackinIrTest1.git
 cd trackinIrTest1
 python -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-.venv\Scripts\python.exe main.py
+.venv\Scripts\activate
+pip install -r requirements.txt
 ```
 
-En Linux/macOS usa `.venv/bin/python` en lugar de `.venv\Scripts\python.exe`.
+Si `activate` da error de permisos (ExecutionPolicy), corre esto una vez y repite `activate`:
+`Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`
 
-Otra cámara: `main.py --listar` y luego `main.py --camara 1`. Más opciones: `main.py --help`.
+## Correr
+
+```
+cd trackinIrTest1
+.venv\Scripts\activate
+python main.py
+```
+
+Verás `(.venv)` al inicio de la línea cuando esté activado. En Linux/macOS: `source .venv/bin/activate`.
+
+Otra cámara: `python main.py --listar` y luego `python main.py --camara 1`. Más opciones: `python main.py --help`.
 
 ## Teclas
 
