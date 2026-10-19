@@ -31,8 +31,8 @@ Incluye también el firmware para encender los LEDs con un ESP32.
 ### Windows (PowerShell)
 
 ```powershell
-git clone <URL_DEL_REPO>
-cd femtoirtest
+git clone https://github.com/chuyAguilar/trackinIrTest1.git
+cd trackinIrTest1
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
@@ -54,8 +54,8 @@ O bien, sin activar nada, usa directamente el Python del entorno:
 ### Linux / macOS (Terminal)
 
 ```bash
-git clone <URL_DEL_REPO>
-cd femtoirtest
+git clone https://github.com/chuyAguilar/trackinIrTest1.git
+cd trackinIrTest1
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
